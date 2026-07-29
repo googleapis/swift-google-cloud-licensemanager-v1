@@ -53,14 +53,14 @@ extension Clients {
 
     public func listConfigurations(
       request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListConfigurationsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+            -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
           in
           return try await self.inner.listConfigurations(request: r, options: o)
         })
@@ -68,14 +68,14 @@ extension Clients {
 
     public func getConfiguration(
       request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Configuration {
+    ) async throws -> GoogleCloudLicenseManagerV1.Configuration {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetConfigurationRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.Configuration
+            -> GoogleCloudLicenseManagerV1.Configuration
           in
           return try await self.inner.getConfiguration(request: r, options: o)
         })
@@ -128,14 +128,14 @@ extension Clients {
 
     public func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListInstancesRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.ListInstancesResponse
+            -> GoogleCloudLicenseManagerV1.ListInstancesResponse
           in
           return try await self.inner.listInstances(request: r, options: o)
         })
@@ -143,14 +143,14 @@ extension Clients {
 
     public func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Instance {
+    ) async throws -> GoogleCloudLicenseManagerV1.Instance {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetInstanceRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.Instance
+            -> GoogleCloudLicenseManagerV1.Instance
           in
           return try await self.inner.getInstance(request: r, options: o)
         })
@@ -188,14 +188,14 @@ extension Clients {
 
     public func queryConfigurationLicenseUsage(
       request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: QueryConfigurationLicenseUsageRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+            -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
           in
           return try await self.inner.queryConfigurationLicenseUsage(request: r, options: o)
         })
@@ -203,14 +203,14 @@ extension Clients {
 
     public func aggregateUsage(
       request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: AggregateUsageRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.AggregateUsageResponse
+            -> GoogleCloudLicenseManagerV1.AggregateUsageResponse
           in
           return try await self.inner.aggregateUsage(request: r, options: o)
         })
@@ -218,14 +218,14 @@ extension Clients {
 
     public func listProducts(
       request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: ListProductsRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.ListProductsResponse
+            -> GoogleCloudLicenseManagerV1.ListProductsResponse
           in
           return try await self.inner.listProducts(request: r, options: o)
         })
@@ -233,14 +233,14 @@ extension Clients {
 
     public func getProduct(
       request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Product {
+    ) async throws -> GoogleCloudLicenseManagerV1.Product {
       try await self._intercept(
         request: request,
         options: options,
         idempotent: true,
         action: {
           (r: GetProductRequest, o: GoogleCloudGax.RequestOptions) async throws
-            -> GoogleCloudLicensemanagerV1.Product
+            -> GoogleCloudLicenseManagerV1.Product
           in
           return try await self.inner.getProduct(request: r, options: o)
         })

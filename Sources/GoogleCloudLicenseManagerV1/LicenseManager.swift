@@ -45,7 +45,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_ListConfigurations")
   public func listConfigurations(
     request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse {
     try await self.inner.listConfigurations(request: request, options: options)
   }
 
@@ -56,7 +56,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
     byItem: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Configuration, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
       in
       var request = byItem
       request.pageToken = token
@@ -70,7 +70,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_GetConfiguration")
   public func getConfiguration(
     request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Configuration {
+  ) async throws -> GoogleCloudLicenseManagerV1.Configuration {
     try await self.inner.getConfiguration(request: request, options: options)
   }
 
@@ -260,7 +260,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_ListInstances")
   public func listInstances(
     request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse {
     try await self.inner.listInstances(request: request, options: options)
   }
 
@@ -271,7 +271,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
     byItem: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Instance, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listInstances(request: request, options: options)
@@ -284,7 +284,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_GetInstance")
   public func getInstance(
     request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Instance {
+  ) async throws -> GoogleCloudLicenseManagerV1.Instance {
     try await self.inner.getInstance(request: request, options: options)
   }
 
@@ -419,7 +419,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_QueryConfigurationLicenseUsage")
   public func queryConfigurationLicenseUsage(
     request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse {
     try await self.inner.queryConfigurationLicenseUsage(request: request, options: options)
   }
 
@@ -428,7 +428,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_AggregateUsage")
   public func aggregateUsage(
     request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse {
     try await self.inner.aggregateUsage(request: request, options: options)
   }
 
@@ -439,7 +439,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
     byItem: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Usage, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse in
       var request = byItem
       request.pageToken = token
       return try await self.aggregateUsage(request: request, options: options)
@@ -452,7 +452,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_ListProducts")
   public func listProducts(
     request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse {
     try await self.inner.listProducts(request: request, options: options)
   }
 
@@ -463,7 +463,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
     byItem: ListProductsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Product, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse in
       var request = byItem
       request.pageToken = token
       return try await self.listProducts(request: request, options: options)
@@ -476,7 +476,7 @@ public class LicenseManagerClient: Clients.LicenseManagerProtocol {
   /// @Snippet(path: "LicenseManager_GetProduct")
   public func getProduct(
     request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Product {
+  ) async throws -> GoogleCloudLicenseManagerV1.Product {
     try await self.inner.getProduct(request: request, options: options)
   }
 
@@ -584,7 +584,7 @@ extension Clients {
   public protocol LicenseManagerProtocol {
     /// See `LicenseManagerClient.listConfigurations`.
     func listConfigurations(request: ListConfigurationsRequest) async throws
-      -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+      -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
 
     /// See `LicenseManagerClient.listConfigurations`.
     func listConfigurations(
@@ -598,12 +598,12 @@ extension Clients {
 
     /// See `LicenseManagerClient.getConfiguration`.
     func getConfiguration(request: GetConfigurationRequest) async throws
-      -> GoogleCloudLicensemanagerV1.Configuration
+      -> GoogleCloudLicenseManagerV1.Configuration
 
     /// See `LicenseManagerClient.getConfiguration`.
     func getConfiguration(
       name: Swift.String,
-    ) async throws -> GoogleCloudLicensemanagerV1.Configuration
+    ) async throws -> GoogleCloudLicenseManagerV1.Configuration
 
     /// See `LicenseManagerClient.createConfiguration`.
     func createConfiguration(request: CreateConfigurationRequest) async throws
@@ -649,7 +649,7 @@ extension Clients {
 
     /// See `LicenseManagerClient.listInstances`.
     func listInstances(request: ListInstancesRequest) async throws
-      -> GoogleCloudLicensemanagerV1.ListInstancesResponse
+      -> GoogleCloudLicenseManagerV1.ListInstancesResponse
 
     /// See `LicenseManagerClient.listInstances`.
     func listInstances(
@@ -663,12 +663,12 @@ extension Clients {
 
     /// See `LicenseManagerClient.getInstance`.
     func getInstance(request: GetInstanceRequest) async throws
-      -> GoogleCloudLicensemanagerV1.Instance
+      -> GoogleCloudLicenseManagerV1.Instance
 
     /// See `LicenseManagerClient.getInstance`.
     func getInstance(
       name: Swift.String,
-    ) async throws -> GoogleCloudLicensemanagerV1.Instance
+    ) async throws -> GoogleCloudLicenseManagerV1.Instance
 
     /// See `LicenseManagerClient.deactivateConfiguration`.
     func deactivateConfiguration(request: DeactivateConfigurationRequest) async throws
@@ -698,18 +698,18 @@ extension Clients {
 
     /// See `LicenseManagerClient.queryConfigurationLicenseUsage`.
     func queryConfigurationLicenseUsage(request: QueryConfigurationLicenseUsageRequest) async throws
-      -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+      -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
 
     /// See `LicenseManagerClient.queryConfigurationLicenseUsage`.
     func queryConfigurationLicenseUsage(
       name: Swift.String,
       startTime: GoogleCloudWkt.Timestamp?,
       endTime: GoogleCloudWkt.Timestamp?,
-    ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
 
     /// See `LicenseManagerClient.aggregateUsage`.
     func aggregateUsage(request: AggregateUsageRequest) async throws
-      -> GoogleCloudLicensemanagerV1.AggregateUsageResponse
+      -> GoogleCloudLicenseManagerV1.AggregateUsageResponse
 
     /// See `LicenseManagerClient.aggregateUsage`.
     func aggregateUsage(
@@ -725,7 +725,7 @@ extension Clients {
 
     /// See `LicenseManagerClient.listProducts`.
     func listProducts(request: ListProductsRequest) async throws
-      -> GoogleCloudLicensemanagerV1.ListProductsResponse
+      -> GoogleCloudLicenseManagerV1.ListProductsResponse
 
     /// See `LicenseManagerClient.listProducts`.
     func listProducts(
@@ -738,12 +738,12 @@ extension Clients {
     ) throws -> any AsyncSequence<Product, Swift.Error>
 
     /// See `LicenseManagerClient.getProduct`.
-    func getProduct(request: GetProductRequest) async throws -> GoogleCloudLicensemanagerV1.Product
+    func getProduct(request: GetProductRequest) async throws -> GoogleCloudLicenseManagerV1.Product
 
     /// See `LicenseManagerClient.getProduct`.
     func getProduct(
       name: Swift.String,
-    ) async throws -> GoogleCloudLicensemanagerV1.Product
+    ) async throws -> GoogleCloudLicenseManagerV1.Product
 
     /// See `LicenseManagerClient.listLocations`.
     func listLocations(request: GoogleCloudLocation.ListLocationsRequest) async throws
@@ -792,7 +792,7 @@ extension Clients {
     /// See `LicenseManagerClient.listConfigurations`.
     func listConfigurations(
       request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
 
     /// See `LicenseManagerClient.listConfigurations`.
     func listConfigurations(
@@ -802,7 +802,7 @@ extension Clients {
     /// See `LicenseManagerClient.getConfiguration`.
     func getConfiguration(
       request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Configuration
+    ) async throws -> GoogleCloudLicenseManagerV1.Configuration
 
     /// See `LicenseManagerClient.createConfiguration`.
     func createConfiguration(
@@ -837,7 +837,7 @@ extension Clients {
     /// See `LicenseManagerClient.listInstances`.
     func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse
 
     /// See `LicenseManagerClient.listInstances`.
     func listInstances(
@@ -847,7 +847,7 @@ extension Clients {
     /// See `LicenseManagerClient.getInstance`.
     func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Instance
+    ) async throws -> GoogleCloudLicenseManagerV1.Instance
 
     /// See `LicenseManagerClient.deactivateConfiguration`.
     func deactivateConfiguration(
@@ -872,12 +872,12 @@ extension Clients {
     /// See `LicenseManagerClient.queryConfigurationLicenseUsage`.
     func queryConfigurationLicenseUsage(
       request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
 
     /// See `LicenseManagerClient.aggregateUsage`.
     func aggregateUsage(
       request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse
 
     /// See `LicenseManagerClient.aggregateUsage`.
     func aggregateUsage(
@@ -887,7 +887,7 @@ extension Clients {
     /// See `LicenseManagerClient.listProducts`.
     func listProducts(
       request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse
 
     /// See `LicenseManagerClient.listProducts`.
     func listProducts(
@@ -897,7 +897,7 @@ extension Clients {
     /// See `LicenseManagerClient.getProduct`.
     func getProduct(
       request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Product
+    ) async throws -> GoogleCloudLicenseManagerV1.Product
 
     /// See `LicenseManagerClient.listLocations`.
     func listLocations(
@@ -939,14 +939,14 @@ extension Clients {
 // Default implementations
 extension Clients.LicenseManagerProtocol {
   public func listConfigurations(request: ListConfigurationsRequest) async throws
-    -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+    -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
   {
     try await self.listConfigurations(request: request, options: .init())
   }
 
   public func listConfigurations(
     request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -960,7 +960,7 @@ extension Clients.LicenseManagerProtocol {
     byItem: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Configuration, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
       in
       throw GoogleCloudGax.RequestError.unimplemented
     }
@@ -977,20 +977,20 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func getConfiguration(request: GetConfigurationRequest) async throws
-    -> GoogleCloudLicensemanagerV1.Configuration
+    -> GoogleCloudLicenseManagerV1.Configuration
   {
     try await self.getConfiguration(request: request, options: .init())
   }
 
   public func getConfiguration(
     request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Configuration {
+  ) async throws -> GoogleCloudLicenseManagerV1.Configuration {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getConfiguration(
     name: Swift.String,
-  ) async throws -> GoogleCloudLicensemanagerV1.Configuration {
+  ) async throws -> GoogleCloudLicenseManagerV1.Configuration {
     let request = GetConfigurationRequest().with {
       $0.name = name
     }
@@ -1115,14 +1115,14 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func listInstances(request: ListInstancesRequest) async throws
-    -> GoogleCloudLicensemanagerV1.ListInstancesResponse
+    -> GoogleCloudLicenseManagerV1.ListInstancesResponse
   {
     try await self.listInstances(request: request, options: .init())
   }
 
   public func listInstances(
     request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1136,7 +1136,7 @@ extension Clients.LicenseManagerProtocol {
     byItem: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Instance, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1152,20 +1152,20 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func getInstance(request: GetInstanceRequest) async throws
-    -> GoogleCloudLicensemanagerV1.Instance
+    -> GoogleCloudLicenseManagerV1.Instance
   {
     try await self.getInstance(request: request, options: .init())
   }
 
   public func getInstance(
     request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Instance {
+  ) async throws -> GoogleCloudLicenseManagerV1.Instance {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getInstance(
     name: Swift.String,
-  ) async throws -> GoogleCloudLicensemanagerV1.Instance {
+  ) async throws -> GoogleCloudLicenseManagerV1.Instance {
     let request = GetInstanceRequest().with {
       $0.name = name
     }
@@ -1247,14 +1247,14 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func queryConfigurationLicenseUsage(request: QueryConfigurationLicenseUsageRequest)
-    async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+    async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
   {
     try await self.queryConfigurationLicenseUsage(request: request, options: .init())
   }
 
   public func queryConfigurationLicenseUsage(
     request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1262,7 +1262,7 @@ extension Clients.LicenseManagerProtocol {
     name: Swift.String,
     startTime: GoogleCloudWkt.Timestamp?,
     endTime: GoogleCloudWkt.Timestamp?,
-  ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse {
     let request = QueryConfigurationLicenseUsageRequest().with {
       $0.name = name
       $0.startTime = startTime
@@ -1272,14 +1272,14 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func aggregateUsage(request: AggregateUsageRequest) async throws
-    -> GoogleCloudLicensemanagerV1.AggregateUsageResponse
+    -> GoogleCloudLicenseManagerV1.AggregateUsageResponse
   {
     try await self.aggregateUsage(request: request, options: .init())
   }
 
   public func aggregateUsage(
     request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1293,7 +1293,7 @@ extension Clients.LicenseManagerProtocol {
     byItem: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Usage, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1313,14 +1313,14 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func listProducts(request: ListProductsRequest) async throws
-    -> GoogleCloudLicensemanagerV1.ListProductsResponse
+    -> GoogleCloudLicenseManagerV1.ListProductsResponse
   {
     try await self.listProducts(request: request, options: .init())
   }
 
   public func listProducts(
     request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse {
+  ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
@@ -1334,7 +1334,7 @@ extension Clients.LicenseManagerProtocol {
     byItem: ListProductsRequest, options: GoogleCloudGax.RequestOptions
   ) throws -> any AsyncSequence<Product, Swift.Error> {
     let listRpc = {
-      (token: Swift.String) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse in
+      (token: Swift.String) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse in
       throw GoogleCloudGax.RequestError.unimplemented
     }
     return GoogleCloudGax.PaginatedResponseSequence(listRpc: listRpc)
@@ -1350,20 +1350,20 @@ extension Clients.LicenseManagerProtocol {
   }
 
   public func getProduct(request: GetProductRequest) async throws
-    -> GoogleCloudLicensemanagerV1.Product
+    -> GoogleCloudLicenseManagerV1.Product
   {
     try await self.getProduct(request: request, options: .init())
   }
 
   public func getProduct(
     request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-  ) async throws -> GoogleCloudLicensemanagerV1.Product {
+  ) async throws -> GoogleCloudLicenseManagerV1.Product {
     throw GoogleCloudGax.RequestError.unimplemented
   }
 
   public func getProduct(
     name: Swift.String,
-  ) async throws -> GoogleCloudLicensemanagerV1.Product {
+  ) async throws -> GoogleCloudLicenseManagerV1.Product {
     let request = GetProductRequest().with {
       $0.name = name
     }

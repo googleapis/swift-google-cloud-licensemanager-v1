@@ -28,11 +28,11 @@ extension Clients {
   protocol LicenseManagerStub {
     func listConfigurations(
       request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse
 
     func getConfiguration(
       request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Configuration
+    ) async throws -> GoogleCloudLicenseManagerV1.Configuration
 
     func createConfiguration(
       request: CreateConfigurationRequest, options: GoogleCloudGax.RequestOptions
@@ -48,11 +48,11 @@ extension Clients {
 
     func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse
 
     func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Instance
+    ) async throws -> GoogleCloudLicenseManagerV1.Instance
 
     func deactivateConfiguration(
       request: DeactivateConfigurationRequest, options: GoogleCloudGax.RequestOptions
@@ -64,19 +64,19 @@ extension Clients {
 
     func queryConfigurationLicenseUsage(
       request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse
 
     func aggregateUsage(
       request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse
 
     func listProducts(
       request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse
+    ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse
 
     func getProduct(
       request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Product
+    ) async throws -> GoogleCloudLicenseManagerV1.Product
 
     func listLocations(
       request: GoogleCloudLocation.ListLocationsRequest, options: GoogleCloudGax.RequestOptions
@@ -113,7 +113,7 @@ extension Clients {
 
     public func listConfigurations(
       request: ListConfigurationsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListConfigurationsResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListConfigurationsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -133,12 +133,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.ListConfigurationsResponse.self, from: data)
+        GoogleCloudLicenseManagerV1.ListConfigurationsResponse.self, from: data)
     }
 
     public func getConfiguration(
       request: GetConfigurationRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Configuration {
+    ) async throws -> GoogleCloudLicenseManagerV1.Configuration {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -153,7 +153,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.Configuration.self, from: data)
+        GoogleCloudLicenseManagerV1.Configuration.self, from: data)
     }
 
     public func createConfiguration(
@@ -237,7 +237,7 @@ extension Clients {
 
     public func listInstances(
       request: ListInstancesRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListInstancesResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListInstancesResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -257,12 +257,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.ListInstancesResponse.self, from: data)
+        GoogleCloudLicenseManagerV1.ListInstancesResponse.self, from: data)
     }
 
     public func getInstance(
       request: GetInstanceRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Instance {
+    ) async throws -> GoogleCloudLicenseManagerV1.Instance {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -277,7 +277,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.Instance.self, from: data)
+        GoogleCloudLicenseManagerV1.Instance.self, from: data)
     }
 
     public func deactivateConfiguration(
@@ -326,7 +326,7 @@ extension Clients {
 
     public func queryConfigurationLicenseUsage(
       request: QueryConfigurationLicenseUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -344,12 +344,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.QueryConfigurationLicenseUsageResponse.self, from: data)
+        GoogleCloudLicenseManagerV1.QueryConfigurationLicenseUsageResponse.self, from: data)
     }
 
     public func aggregateUsage(
       request: AggregateUsageRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.AggregateUsageResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.AggregateUsageResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -371,12 +371,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.AggregateUsageResponse.self, from: data)
+        GoogleCloudLicenseManagerV1.AggregateUsageResponse.self, from: data)
     }
 
     public func listProducts(
       request: ListProductsRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.ListProductsResponse {
+    ) async throws -> GoogleCloudLicenseManagerV1.ListProductsResponse {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.parent as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.parent' is not set or is empty")
@@ -396,12 +396,12 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.ListProductsResponse.self, from: data)
+        GoogleCloudLicenseManagerV1.ListProductsResponse.self, from: data)
     }
 
     public func getProduct(
       request: GetProductRequest, options: GoogleCloudGax.RequestOptions
-    ) async throws -> GoogleCloudLicensemanagerV1.Product {
+    ) async throws -> GoogleCloudLicenseManagerV1.Product {
       let path = try { () throws -> Swift.String in
         guard let pathVariable0 = request.name as Swift.String?, !pathVariable0.isEmpty else {
           throw GoogleCloudGax.RequestError.binding("'request.name' is not set or is empty")
@@ -416,7 +416,7 @@ extension Clients {
       req.setValue(Clients.clientHeader, forHTTPHeaderField: "X-Goog-Api-Client")
       let (data, _) = try await self.inner.rpc(for: req).get()
       return try GoogleCloudWkt._ProtoJSONDecoder().decode(
-        GoogleCloudLicensemanagerV1.Product.self, from: data)
+        GoogleCloudLicenseManagerV1.Product.self, from: data)
     }
 
     public func listLocations(
